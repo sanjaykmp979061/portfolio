@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  perspective: 1000px;
+  background-color: #000;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9ydGZvbGlvJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D') center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav .left, nav .right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+nav img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+nav span {
+  color: white;
+  font-weight: bold;
+}
+
+nav a {
+  color: #0ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+section {
+  padding: 100px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.hero {
+  transform-style: preserve-3d;
+  animation: hero3d 10s infinite alternate ease-in-out;
+}
+
+@keyframes hero3d {
+  0% { transform: rotateX(0deg) rotateY(0deg); }
+  50% { transform: rotateX(5deg) rotateY(5deg); }
+  100% { transform: rotateX(0deg) rotateY(0deg); }
+}
+
+.hero h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  transform-style: preserve-3d;
+}
+
+.hero h1::before {
+  content: '';
+  background: url('logo-overlay.png') no-repeat center;
+  background-size: contain;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(20deg) translateZ(30px);
+  opacity: 0.7;
+}
+
+.hero .tagline {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff;
+}
+
+.project {
+  text-align: left;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.project h3 {
+  color: #0ff;
+}
+
+.project ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #ccc;
+  margin-top: 40px;
+}
